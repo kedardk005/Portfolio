@@ -428,12 +428,6 @@ section {
     transition: all 0.3s ease;
 }
 
-.skill-tag:hover {
-    background: #2563eb;
-    color: white;
-    transform: translateY(-2px);
-}
-
 /* Experience Section */
 .experience-section {
     background: #f8fafc;
