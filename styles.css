@@ -272,9 +272,10 @@ section {
 }
 
 .timeline {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
     position: relative;
+    padding: 2rem 0;
 }
 
 .timeline::before {
@@ -283,44 +284,55 @@ section {
     left: 50%;
     transform: translateX(-50%);
     width: 4px;
-    height: 100%;
+    height: calc(100% - 4rem);
+    top: 2rem;
     background: linear-gradient(to bottom, #2563eb, #1d4ed8);
     border-radius: 2px;
 }
 
 .timeline-item {
     display: flex;
-    justify-content: center;
-    padding: 2rem 0;
     position: relative;
+    margin-bottom: 3rem;
+    width: 100%;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-item:nth-child(odd) {
+    justify-content: flex-end;
+}
+
+.timeline-item:nth-child(even) {
+    justify-content: flex-start;
 }
 
 .timeline-item:nth-child(odd) .timeline-content {
-    margin-right: 50%;
-    padding-right: 2rem;
+    margin-right: calc(50% + 2rem);
     text-align: right;
-    margin-left: 0;
+    max-width: calc(50% - 3rem);
 }
 
 .timeline-item:nth-child(even) .timeline-content {
-    margin-left: 50%;
-    padding-left: 2rem;
+    margin-left: calc(50% + 2rem);
     text-align: left;
-    margin-right: 0;
+    max-width: calc(50% - 3rem);
 }
 
 .timeline-dot {
     position: absolute;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    top: 2rem;
+    transform: translateX(-50%);
     width: 20px;
     height: 20px;
     background: #2563eb;
     border: 4px solid white;
     border-radius: 50%;
     box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
-    z-index: 1;
+    z-index: 2;
 }
 
 .timeline-content {
