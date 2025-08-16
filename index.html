@@ -290,16 +290,27 @@
         <div class="container">
             <h2 class="section-title">Resume</h2>
             <div class="resume-content fade-in">
-                <div class="resume-card">
-                    <div class="resume-icon">
-                        <i class="fas fa-file-pdf"></i>
+                <div class="resume-preview">
+                    <h3>Resume Preview</h3>
+                    <div class="pdf-preview-container">
+                        <iframe
+                            src="https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/preview"
+                            class="pdf-preview"
+                            allow="autoplay">
+                        </iframe>
                     </div>
-                    <h3>Download My Resume</h3>
-                    <p>Get a complete overview of my education, skills, experience, and projects.</p>
-                    <button class="download-btn" onclick="downloadResume()">
-                        <i class="fas fa-download"></i>
-                        Download PDF
-                    </button>
+                    <div class="resume-actions">
+                        <a href="https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/view?usp=sharing"
+                           target="_blank"
+                           class="view-btn">
+                            <i class="fas fa-eye"></i>
+                            View Full Resume
+                        </a>
+                        <button class="download-btn" onclick="downloadResume()">
+                            <i class="fas fa-download"></i>
+                            Download PDF
+                        </button>
+                    </div>
                 </div>
             </div>
 
