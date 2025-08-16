@@ -66,8 +66,8 @@ window.addEventListener('scroll', () => {
 function downloadResume() {
     // For now, this redirects to Google Drive download link
     // Replace the file ID with your actual Google Drive file ID when you upload your resume
-    const googleDriveFileId = 'https://drive.google.com/file/d/1By0CuaWy62wKOu3nn2t17KrRmtF-YSkr/view?usp=sharing';
-    const downloadUrl = `https://drive.google.com/file/d/1By0CuaWy62wKOu3nn2t17KrRmtF-YSkr/view?usp=sharing`;
+    const googleDriveFileId = 'https://drive.google.com/file/d/1Q6KbRLCsKylpBNvdVlIo-uoqbNeqYBVz/view?usp=sharing';
+    const downloadUrl = `https://drive.google.com/file/d/1Q6KbRLCsKylpBNvdVlIo-uoqbNeqYBVz/view?usp=sharing`;
 
     // Open download in new tab
     window.open(downloadUrl, '_blank');
