@@ -27,26 +27,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Intersection Observer for fade-in animations
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.animationPlayState = 'running';
-            entry.target.style.opacity = '1';
-        }
-    });
-}, observerOptions);
-
-// Observe all fade-in elements
-document.querySelectorAll('.fade-in').forEach(el => {
-    el.style.animationPlayState = 'paused';
-    observer.observe(el);
-});
+// Intersection Observer animations removed
 
 // Active navigation link highlighting
 window.addEventListener('scroll', () => {
@@ -155,74 +136,8 @@ document.querySelectorAll('.skill-category').forEach(category => {
     });
 });
 
-// Typing animation for the main heading
-function typeWriter(element, text, speed = 100) {
-    let i = 0;
-    element.innerHTML = '';
-    
-    function type() {
-        if (i < text.length) {
-            element.innerHTML += text.charAt(i);
-            i++;
-            setTimeout(type, speed);
-        }
-    }
-    
-    type();
-}
+// Typing animation removed
 
-// Initialize typing animation when page loads
-window.addEventListener('load', () => {
-    const nameElement = document.querySelector('.highlight');
-    if (nameElement) {
-        const originalText = nameElement.textContent;
-        typeWriter(nameElement, originalText, 150);
-    }
-});
+// Loading animation removed
 
-// Add loading animation
-window.addEventListener('load', () => {
-    document.body.classList.add('loaded');
-});
-
-// Enhanced scroll animations
-function isElementInViewport(el) {
-    const rect = el.getBoundingClientRect();
-    return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-}
-
-function handleScrollAnimations() {
-    const animatedElements = document.querySelectorAll('.fade-in');
-    
-    animatedElements.forEach(element => {
-        if (isElementInViewport(element)) {
-            element.style.opacity = '1';
-            element.style.transform = 'translateY(0)';
-        }
-    });
-}
-
-// Throttled scroll event
-let ticking = false;
-
-function updateScrollAnimations() {
-    handleScrollAnimations();
-    ticking = false;
-}
-
-window.addEventListener('scroll', () => {
-    if (!ticking) {
-        requestAnimationFrame(updateScrollAnimations);
-        ticking = true;
-    }
-});
-
-// Initialize animations on page load
-document.addEventListener('DOMContentLoaded', () => {
-    handleScrollAnimations();
-});
+// Scroll animations removed
