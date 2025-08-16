@@ -83,72 +83,16 @@ window.addEventListener('scroll', () => {
 
 // Resume download function
 function downloadResume() {
-    // Create a sample resume content (in a real scenario, this would be a pre-made PDF)
-    const resumeContent = `
-        KEDAR KOTHARI
-        Computer Engineering Student & Frontend Developer
-        
-        CONTACT INFORMATION
-        Location: Bharuch, India
-        Phone: +91 9898411504
-        Email: kedardk005@gmail.com
-        LinkedIn: linkedin.com/in/kedar-kothari
-        GitHub: github.com/kedar-kothari
-        
-        EDUCATION
-        B.Tech in Computer Engineering
-        CHAROTAR UNIVERSITY OF SCIENCE AND TECHNOLOGY, Anand, India
-        July 2023 – Present | CGPA: 6.2
-        
-        Higher Secondary Education
-        PARTH INSTITUTE, Vadodara, India
-        March 2023 | Percentage: 58%
-        
-        Secondary Education
-        AMITY SCHOOL, Bharuch, India
-        May 2021 | Percentage: 71.83%
-        
-        TECHNICAL SKILLS
-        Programming Languages: C, C++, Java
-        Web Technologies: HTML, CSS, JavaScript, React, Tailwind CSS, Google Sites
-        Mobile Development: Flutter, Android Studio
-        Core Skills: Data Structures & Algorithms
-        Tools: Canva, Figma, Microsoft Office, AI Tools
-        
-        EXPERIENCE
-        Frontend Development Intern
-        Param Consultancy Services, India | May – June 2025
-        • Built responsive web applications using React and Tailwind CSS
-        • Implemented reusable UI components to improve development efficiency
-        • Utilized Git/GitHub for version control and followed industry coding standards
-        
-        PROJECTS
-        1. Tripkrafter Website (HTML, CSS, MySQL)
-           Responsive trip planner with drag-and-drop destinations, form validation, and modern UI design.
-        
-        2. Food Ordering App (Flutter, SQL, Firebase)
-           Real-time order tracking system with intuitive UI and optimized performance.
-        
-        3. Rental Management System (React, Node.js, PostgreSQL, Vite)
-           Full-stack application with booking system, payment integration, and admin dashboard.
-        
-        CERTIFICATIONS
-        • NPTEL - Data Structures & Algorithms using Java
-        • IBM Machine Learning Professional Certificate
-        • RESTful Microservices (Node.js & Express) - NIIT
-    `;
-    
-    // Create and download a text file (in a real scenario, you'd have a proper PDF)
-    const element = document.createElement('a');
-    const file = new Blob([resumeContent], { type: 'text/plain' });
-    element.href = URL.createObjectURL(file);
-    element.download = 'Kedar_Kothari_Resume.txt';
-    document.body.appendChild(element);
-    element.click();
-    document.body.removeChild(element);
-    
-    // Show download confirmation
-    showNotification('Resume downloaded successfully!', 'success');
+    // For now, this redirects to Google Drive download link
+    // Replace the file ID with your actual Google Drive file ID when you upload your resume
+    const googleDriveFileId = '1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms';
+    const downloadUrl = `https://drive.google.com/uc?export=download&id=${googleDriveFileId}`;
+
+    // Open download in new tab
+    window.open(downloadUrl, '_blank');
+
+    // Show download notification
+    showNotification('Resume download started!', 'success');
 }
 
 // Notification system
