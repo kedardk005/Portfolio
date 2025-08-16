@@ -773,20 +773,25 @@ section {
     }
 
     .timeline::before {
-        left: 20px;
+        left: 30px;
+        transform: none;
+    }
+
+    .timeline-item {
+        justify-content: flex-start !important;
     }
 
     .timeline-item:nth-child(odd) .timeline-content,
     .timeline-item:nth-child(even) .timeline-content {
-        margin-left: 60px;
+        margin-left: 70px;
         margin-right: 0;
-        padding-left: 1rem;
-        padding-right: 1rem;
         text-align: left;
+        max-width: calc(100% - 90px);
     }
 
     .timeline-dot {
-        left: 20px;
+        left: 30px;
+        transform: translateX(-50%);
     }
 
     .skills-grid {
